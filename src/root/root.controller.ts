@@ -6,7 +6,7 @@ export class RootController {
   RootHandler() {
     return {
       status: 'ok',
-      message: 'go to /weather',
+      message: 'Success. Go to /weather to see the weather xD',
     };
   }
 }
