@@ -2,12 +2,11 @@ import { Module, HttpModule } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { WeatherController } from './weather/weather.controller';
 import { WeatherService } from './weather/weather.service';
-import { HealthController } from './health/health.controller';
-import { HealthService } from './health/health.service';
+import { RootController } from './root/root.controller';
 
 @Module({
   imports: [HttpModule, ConfigModule.forRoot()],
-  controllers: [WeatherController, HealthController],
-  providers: [WeatherService, HealthService],
+  controllers: [WeatherController, RootController],
+  providers: [WeatherService],
 })
 export class AppModule {}
